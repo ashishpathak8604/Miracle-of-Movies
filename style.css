@@ -1,0 +1,289 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+*::selection{
+    color:white;
+    background-color: black;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #F7F7F7;
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+#nav #nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#links{
+    padding: 10px;
+}
+#nav-part1{
+   
+    height: 60px;
+    width: 150px;
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+    
+
+}
+#nav2 #links a{
+    text-transform: uppercase;
+
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(160, 156, 156);
+    
+}
+#nav2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+    
+}
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0); 
+    z-index:9 ;
+    opacity: 0.8;
+
+
+
+}
+
+#page1{
+    min-height: 100vh;
+    position: relative ;
+    width: 100%;
+    padding-top: 19vh;
+    padding-left: 3vh;
+    
+
+}
+ 
+#page1 h1{
+    
+    font-size: 18vw;
+    text-transform: uppercase;
+    font-family: kanit;
+    line-height: 14vw ;
+     
+}
+.elem2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: kanit;
+    line-height: 14vw ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+   
+    margin-top: 1-vw;
+    position: relative;
+   
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    padding: 2vw 1vw;
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: kanit;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2{
+   min-height: 100vh;
+    width: 100%;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+ 
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+
+.elem .dets{
+    height: 40px;
+    border-radius: 50px;
+    width: 300px;
+    position: absolute;
+    z-index: 9;
+    background-color: pink;
+}
+
+.elem .dets:hover{
+    height: 200px;
+    transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position:relative;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 50vh;
+    width: 40vw;
+    padding-top: 3vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+ .child img{
+    
+    height: 100%;
+    width: 70%;
+    border-radius: 2% ;
+    
+    
+}
+
+
+@media (max-width:600px){
+    #page1{
+        
+        min-height: 70vh;
+        padding-top: 25vh;
+        width: 100%;
+        padding-top: 25vh;
+        padding: 0 3vw;
+        
+    
+    }
+    #page1 h1{
+       
+        font-size: 18vw;
+        font-family: kanit;
+         letter-spacing: -3px;
+    }
+    #video-container{
+        height: 50vh;
+      
+      margin-top: 3vw;
+    
+    }
+    #video-container #play{
+        padding: 6.5vw 5vw;
+        background-color: black;
+        color: white;
+        font-size: 4vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-transform: uppercase;
+        font-family: kanit;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+        
+    }
+     
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.2;
+    }
+    
+    #page3{
+        height: 100vh;
+        width: 100%;
+        background-color: aqua;
+    }
+}
